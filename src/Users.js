@@ -3,6 +3,7 @@ import styled from "styled-components";
 import UserContext from "./UserContext";
 import AddUser from "./AddUser";
 import Card from "./components/Card";
+import Button from "./components/Button";
 
 const UserWrapper = styled.div`
   margin-top: 20px;
@@ -20,7 +21,9 @@ const Users = () => {
       <AddUser />
       <UserWrapper>
         {users.map((user) => (
-          <Card first={user.first} last={user.last} image={user.image} />
+          <Card first={user.first} last={user.last} image={user.image}>
+            <Button size="medium">Edit</Button>
+          </Card>
         ))}
       </UserWrapper>
     </div>

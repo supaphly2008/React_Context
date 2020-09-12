@@ -7,6 +7,8 @@ const CardContainer = styled.div`
   border-radius: 5px;
   background-color: #424242;
   color: white;
+  text-align: left;
+  padding-bottom: 20px;
 `;
 
 const CardTitle = styled.h3`
@@ -25,7 +27,7 @@ const CardContent = styled.div`
   padding: 0 20px;
 `;
 
-const Card = ({ first, last, image }) => {
+const Card = ({ first, last, image, children }) => {
   return (
     <CardContainer>
       {/* <CardTitle>Card Title</CardTitle> */}
@@ -34,6 +36,7 @@ const Card = ({ first, last, image }) => {
         <CardTitle>
           {first} {last}
         </CardTitle>
+        {children}
       </CardContent>
     </CardContainer>
   );

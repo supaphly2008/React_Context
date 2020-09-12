@@ -8,9 +8,10 @@ const AddUser = () => {
   const [lastName, setLastName] = useState("");
 
   const addUser = () => {
+    console.log("adsfsadfs");
     const userObj = {
       first: firstName,
-      last: lastName
+      last: lastName,
     };
     setUsers([...users, userObj]);
     setFirstName("");
@@ -19,18 +20,8 @@ const AddUser = () => {
 
   return (
     <div className="addUser">
-      <input
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
-        type="text"
-        placeholder="First Name..."
-      />
-      <input
-        value={lastName}
-        onChange={(e) => setLastName(e.target.value)}
-        type="text"
-        placeholder="Last Name..."
-      />
+      <input value={firstName} onChange={(e) => setFirstName(e.target.value)} type="text" placeholder="First Name..." />
+      <input value={lastName} onChange={(e) => setLastName(e.target.value)} type="text" placeholder="Last Name..." />
       <Button disabled={!firstName || !lastName} onClick={addUser}>
         Add
       </Button>
